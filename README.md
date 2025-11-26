@@ -1,0 +1,104 @@
+# HWP 수식 자동 변환기 - 웹 버전
+
+autoeq.py를 웹 애플리케이션으로 구현한 프로젝트입니다.
+
+## 기능
+
+- 텍스트 파일에서 `$수식$` 형식으로 작성된 수식을 한글(HWP) 문서로 자동 변환
+- 웹 기반 인터페이스로 쉬운 파일 업로드
+- 실시간 진행 상황 모니터링
+- 변환된 HWP 파일 다운로드
+
+## 설치 방법
+
+### 1. 가상환경 생성 (권장)
+```bash
+python -m venv venv
+```
+
+### 2. 가상환경 활성화
+**Windows:**
+```bash
+venv\Scripts\activate
+```
+
+**Mac/Linux:**
+```bash
+source venv/bin/activate
+```
+
+### 3. 패키지 설치
+```bash
+pip install -r requirements.txt
+```
+
+## 실행 방법
+
+```bash
+python app.py
+```
+
+서버가 시작되면 브라우저에서 다음 주소로 접속하세요:
+```
+http://localhost:5000
+```
+
+## 사용 방법
+
+1. **텍스트 파일 준비**
+   - 일반 텍스트와 수식을 포함한 `.txt` 파일을 준비합니다
+   - 수식은 `$수식내용$` 형식으로 작성합니다
+
+2. **파일 업로드**
+   - 웹 페이지에서 파일을 선택하거나 드래그 앤 드롭으로 업로드합니다
+
+3. **변환 시작**
+   - "변환 시작" 버튼을 클릭합니다
+   - 실시간으로 진행 상황을 확인할 수 있습니다
+
+4. **결과 다운로드**
+   - 변환이 완료되면 HWP 파일을 다운로드할 수 있습니다
+
+## 수식 작성 예시
+
+```
+방정식 $x^2 + y^2 = r^2$는 원의 방정식입니다.
+
+피타고라스 정리: $a^2 + b^2 = c^2$
+
+이차방정식의 해: $x = {-b pm sqrt{b^2 - 4ac}} over {2a}$
+```
+
+## 프로젝트 구조
+
+```
+application/
+├── app.py                  # Flask 서버 메인 파일
+├── templates/
+│   └── index.html         # 웹 페이지 HTML
+├── static/
+│   ├── css/
+│   │   └── style.css     # 스타일시트
+│   └── js/
+│       └── script.js     # JavaScript 로직
+├── uploads/               # 업로드된 파일 저장 (자동 생성)
+├── outputs/               # 변환된 HWP 파일 저장 (자동 생성)
+├── requirements.txt       # Python 패키지 목록
+└── README.md             # 이 파일
+```
+
+## 주의사항
+
+- 한글(HWP) 프로그램이 설치되어 있어야 합니다
+- Windows 환경에서만 동작합니다 (pyhwpx는 Windows 전용)
+- 대용량 파일은 처리 시간이 오래 걸릴 수 있습니다
+
+## 기술 스택
+
+- **Backend**: Flask (Python)
+- **Frontend**: HTML, CSS, JavaScript
+- **HWP 제어**: pyhwpx
+
+## 라이센스
+
+MIT License
