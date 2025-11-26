@@ -9,39 +9,6 @@ autoeq.py를 웹 애플리케이션으로 구현한 프로젝트입니다.
 - 실시간 진행 상황 모니터링
 - 변환된 HWP 파일 다운로드
 
-## 설치 방법
-
-### 1. 가상환경 생성 (권장)
-```bash
-python -m venv venv
-```
-
-### 2. 가상환경 활성화
-**Windows:**
-```bash
-venv\Scripts\activate
-```
-
-**Mac/Linux:**
-```bash
-source venv/bin/activate
-```
-
-### 3. 패키지 설치
-```bash
-pip install -r requirements.txt
-```
-
-## 실행 방법
-
-```bash
-python app.py
-```
-
-서버가 시작되면 브라우저에서 다음 주소로 접속하세요:
-```
-http://localhost:5000
-```
 
 ## 사용 방법
 
@@ -98,7 +65,3 @@ application/
 - **Backend**: Flask (Python)
 - **Frontend**: HTML, CSS, JavaScript
 - **HWP 제어**: pyhwpx
-
-## 라이센스
-
-MIT License
