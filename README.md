@@ -34,23 +34,6 @@
 이차방정식의 해: $x = {-b pm sqrt{b^2 - 4ac}} over {2a}$
 ```
 
-## 프로젝트 구조
-
-```
-application/
-├── app.py                  # Flask 서버 메인 파일
-├── templates/
-│   └── index.html         # 웹 페이지 HTML
-├── static/
-│   ├── css/
-│   │   └── style.css     # 스타일시트
-│   └── js/
-│       └── script.js     # JavaScript 로직
-├── uploads/               # 업로드된 파일 저장 (자동 생성)
-├── outputs/               # 변환된 HWP 파일 저장 (자동 생성)
-├── requirements.txt       # Python 패키지 목록
-└── README.md             # 이 파일
-```
 
 ## 주의사항
 
